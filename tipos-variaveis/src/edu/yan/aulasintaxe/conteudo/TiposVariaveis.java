@@ -1,4 +1,4 @@
-package edu.yan.aulasintaxe1.conteudo;
+package edu.yan.aulasintaxe.conteudo;
 
 public class TiposVariaveis {
 	public static void main(String[] args) {
@@ -11,5 +11,8 @@ public class TiposVariaveis {
 		short numeroCurto1 = 1;
 		int numeroNormal = numeroCurto1;
 		short numeroCurto2 = (short) numeroNormal;
+		
+			//quando os valores nunca podem mudar
+		final double VALOR_DE_PI = 3.14;
 	}
 }
