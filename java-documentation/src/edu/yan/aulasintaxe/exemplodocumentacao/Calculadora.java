@@ -1,4 +1,4 @@
-package edu.yan.aulasintaxe.exemplodocumentacao;
+package src.edu.yan.aulasintaxe.exemplodocumentacao;
 
 /**@author yanba
  * @version 1.0
