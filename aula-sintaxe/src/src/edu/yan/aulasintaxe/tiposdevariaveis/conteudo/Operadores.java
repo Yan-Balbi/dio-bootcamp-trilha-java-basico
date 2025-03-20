@@ -1,4 +1,4 @@
-package edu.yan.aulasintaxe.conteudo;
+package src.edu.yan.aulasintaxe.tiposdevariaveis.conteudo;
 
 public class Operadores {
 	public static void main(String[] args) {

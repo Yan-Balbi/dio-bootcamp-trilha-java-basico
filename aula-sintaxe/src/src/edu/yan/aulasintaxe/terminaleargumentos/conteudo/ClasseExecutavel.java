@@ -1,4 +1,4 @@
-package edu.yan.aulasintaxe.conteudo;
+package src.edu.yan.aulasintaxe.terminaleargumentos.conteudo;
 
 public class ClasseExecutavel {
 	public static void main(String[] args) {
