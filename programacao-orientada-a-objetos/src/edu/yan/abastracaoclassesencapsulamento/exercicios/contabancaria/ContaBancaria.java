@@ -1,4 +1,4 @@
-package edu.yan.abastracaoclassesencapsulamento.exercicios;
+package edu.yan.abastracaoclassesencapsulamento.exercicios.contabancaria;
 
 import javax.naming.CommunicationException;
 
