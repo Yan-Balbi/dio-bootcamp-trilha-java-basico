@@ -8,14 +8,17 @@ public class Veiculo {
 	private int velocidadeMinima = 0;
 
 
-	public void ligarCarro() {
+	public boolean ligarCarro() {
 		this.estadoCarro = true;
+		return true;
 	}
 	
-	public void desligarCarro() {
+	public boolean desligarCarro() {
 		if(velocidade == 0 && marcha == 0) {
-			this.estadoCarro = true;
+			this.estadoCarro = false;
+			return true;
 		}
+		return false;
 	}
 	
 	public boolean getEstadoCarro() {
@@ -24,7 +27,7 @@ public class Veiculo {
 	
 	public boolean acelerarCarro() {
 		if(estadoCarro) {
-			if(velocidade >= velocidadeMinima && velocidade <= velocidadeMaxima) {
+			if(velocidade >= velocidadeMinima && velocidade <= velocidadeMaxima && velocidade > 0) {
 				velocidade++;
 				return true;
 			}
@@ -50,27 +53,32 @@ public class Veiculo {
 		//obs: a atividade não permite não permite que um carro não faça nada se estiver desligado
 		if(estadoCarro) {
 			marcha++;
+			velocidade++;
+			aplicarLimiteVelocidadeParaAMarchaCorrespondente();
 			if(marcha >=6) {
 				marcha = 6;
 				return false;
 			}
-			acelerarCarro();
-			aplicarLimiteVelocidadeParaAMarchaCorrespondente();
+
 			return true;
 		}
 		return false;
+	}
+	
+	public int getMarcha() {
+		return this.marcha;
 	}
 	
 	public boolean retornarMarcha() {
 		//obs: a atividade não permite não permite que um carro não faça nada se estiver desligado
 		if(estadoCarro) {
 			marcha--;
+			velocidade--;
+			aplicarLimiteVelocidadeParaAMarchaCorrespondente();
 			if(marcha >=0) {
 				marcha = 0;
 				return false;
 			}
-			desacelerarCarro();
-			aplicarLimiteVelocidadeParaAMarchaCorrespondente();
 			return true;
 		}
 		return false;

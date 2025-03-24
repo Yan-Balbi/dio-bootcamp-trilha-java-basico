@@ -2,6 +2,8 @@ package edu.yan.abastracaoclassesencapsulamento.exercicios.contabancaria;
 
 import java.util.Scanner;
 
+import edu.yan.abastracaoclassesencapsulamento.exercicios.veiculo.VeiculoException;
+
 
 public class Main {
 	public static void main(String[] args) {
